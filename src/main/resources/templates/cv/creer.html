@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+   
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    
+    <link rel="stylesheet" href="/css/animate.css">
+  
+    <link rel="stylesheet" href="/css/normalize.css">
+    
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+   
+    <link rel="stylesheet" href="/css/main.css">
+   
+    <link rel="stylesheet" href="/css/morrisjs/morris.css">
+  
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.min.css">
+   
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="/css/metisMenu/metisMenu-vertical.css">
+   
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="/css/calendar/fullcalendar.print.min.css">
+    
+    <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/theme.min.css" />
+        <link rel="stylesheet"  href="/public/assets/css/color-defaults.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-beige-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-beige.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-yellow.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-blue-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-green-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-red-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-blue.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-green.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-red.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-yellow-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/fonts.min.css" />
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<!--  <embed src="/GestionEmploiSpring/src/main/resources/static/fichiers/CV.pdf"  width=800 height=500 type='application/pdf'/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JFN9wQdxTJI" frameborder="0" allowfullscreen></iframe>
+
+</iframe>
+
+<object data="CV.pdf" type="application/pdf">
+    <iframe src="https://docs.google.com/viewer?url=CV.pdf&embedded=true"></iframe>
+</object>
+-->
+ <!-- Single pro tab review Start-->
+ <header id="masthead" class="navbar navbar-sticky swatch-red-white" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="" class="navbar-brand">
+                      <!--   <img src="public/assets/images/logo.png" alt="One of the best themes ever">--> Gestion Emploi
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse main-navbar" role="navigation">
+                    <div class="sidebar-widget widget_search pull-right">
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search here....">
+                                <span class="input-group-btn">
+                            <button class="btn" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown ">
+                            <a th:href="@{/Offre/liste}">Offres</a>
+                            
+                        </li>
+                         <li class="dropdown ">
+                            <a th:href="@{/Cv/liste}">Cv</a>
+                            
+                        </li>
+                        <li class="dropdown ">
+                            <a th:href="@{/Postule/liste}">Postulez</a>
+                            
+                        </li>
+                       
+                       
+                         <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">[[${#httpServletRequest.remoteUser}]]</a>
+                            <ul class="dropdown-menu">
+                                 <li class="">
+                        
+                            <a th:href="@{/logout}">Deconnexion</a>
+                        
+                        </li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        
+        <div class="single-pro-review-area mt-t-30 mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-payment-inner-st">
+                            <ul id="myTab4" class="tab-review-design" >
+                                
+                                <li class="active " ><a href="#netbanking">Importer Cv</a></li>
+                                <li><a href="#cod">Creer Cv</a></li>
+                            </ul>
+                            
+                               <div id="myTabContent" class="tab-content custom-product-edit">
+                                
+                                
+                                <div class="product-tab-list tab-pane fade active in" id="netbanking">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="col-lg-3"></div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="review-content-section">
+                                                     <form  method="Post" th:action="@{/Cv/import}"  enctype="multipart/form-data" class="contact-form">
+                                                     <div class="form-group form-icon-group">
+				                                    <input class="form-control" id="email"  name="fichier" type="file" required>
+				                                    <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                    
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Ajouter</button>
+                                                    </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-lg-3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="cod">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="review-content-section">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <input name="number" type="text" class="form-control" placeholder="First Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Last Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Address">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" placeholder="Pincode">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+																	<option>Select country</option>
+																	<option>India</option>
+																	<option>Pakistan</option>
+																	<option>Amerika</option>
+																	<option>China</option>
+																	<option>Dubai</option>
+																	<option>Nepal</option>
+																</select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+																	<option>Select state</option>
+																	<option>Gujarat</option>
+																	<option>Maharastra</option>
+																	<option>Rajastan</option>
+																	<option>Maharastra</option>
+																	<option>Rajastan</option>
+																	<option>Gujarat</option>
+																</select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+																	<option>Select city</option>
+																	<option>Surat</option>
+																	<option>Baroda</option>
+																	<option>Navsari</option>
+																	<option>Baroda</option>
+																	<option>Surat</option>
+																</select>
+                                                        </div>
+                                                        <input type="number" class="form-control" placeholder="Mobile no.">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="payment-adress">
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+    <script src="/js/vendor/jquery-1.11.3.min.js"></script>
+   
+    <script src="/js/bootstrap.min.js"></script>
+   
+    <script src="/js/wow.min.js"></script>
+  
+    <script src="/js/jquery-price-slider.js"></script>
+   
+    <script src="/js/jquery.meanmenu.js"></script>
+    
+    <script src="/js/owl.carousel.min.js"></script>
+   
+    <script src="/js/jquery.sticky.js"></script>
+   
+    <script src="/js/jquery.scrollUp.min.js"></script>
+   
+    <script src="/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/scrollbar/mCustomScrollbar-active.js"></script>
+    
+    <script src="/js/metisMenu/metisMenu.min.js"></script>
+    <script src="/js/metisMenu/metisMenu-active.js"></script>
+    
+    <script src="/js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="/js/sparkline/jquery.charts-sparkline.js"></script>
+    
+    <script src="/js/calendar/moment.min.js"></script>
+    <script src="/js/calendar/fullcalendar.min.js"></script>
+    <script src="/js/calendar/fullcalendar-active.js"></script>
+    
+    <script src="/js/tab.js"></script>
+   
+    <script src="/js/card.js"></script>
+    <script src="/js/jquery.payform.min.js"></script>
+    <script src="/js/e-payment.js"></script>
+    
+    <script src="/js/plugins.js"></script>
+   
+    <script src="/js/main.js"></script>
+</html>

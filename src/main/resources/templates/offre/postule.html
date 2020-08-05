@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPRING | GB SMART</title>
+    
+          <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/theme.min.css" />
+        <link rel="stylesheet"  href="/public/assets/css/color-defaults.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-beige-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-beige.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-black-yellow.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-blue-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-green-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-red-white.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-blue.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-green.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-white-red.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/swatch-yellow-black.min.css" />
+        <link rel="stylesheet" href="/public/assets/css/fonts.min.css" />
+        
+      
+    </head>
+    <body>
+        <header id="masthead" class="navbar navbar-sticky swatch-red-white" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="" class="navbar-brand">
+                      <!--   <img src="public/assets/images/logo.png" alt="One of the best themes ever">--> Gestion Emploi
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse main-navbar" role="navigation">
+                    <div class="sidebar-widget widget_search pull-right">
+                        <form>
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search here....">
+                                <span class="input-group-btn">
+                            <button class="btn" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown ">
+                            <a th:href="@{/Offre/liste}">Offres</a>
+                            
+                        </li>
+                         <li class="dropdown ">
+                            <a th:href="@{/Cv/liste}">Cv</a>
+                            
+                        </li>
+                        <li class="dropdown ">
+                            <a th:href="@{/Postule/liste}">Postulez</a>
+                            
+                        </li>
+                       
+                       
+                         <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">[[${#httpServletRequest.remoteUser}]]</a>
+                            <ul class="dropdown-menu">
+                                 <li class="">
+                        
+                            <a th:href="@{/logout}">Deconnexion</a>
+                        
+                        </li>
+                            </ul>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+         <section class="section swatch-red-white">
+         
+         <table>
+         <tr th:each="l:${offres}" >
+         <p class="lead" th:text="${l.offre.type}">
+                               
+                            </p>
+         </tr>
+         </table>
+                <div class="container">
+                    <div class="text-center small-screen-center portfolio-header super">
+                    
+                    <div class="row">
+                    
+                      
+                        <div class="col-md-9">
+                            
+                           
+                           
+                        </div>
+                       </tr>
+                        </table>
+                        
+                        <div class="col-md-3">
+                            <div class="portfolio-list overlay">
+                                <h3 class="portfolio-list-header text-center overlay">
+            Features
+          </h3>
+                                <ul class="portfolio-list icons-ul">
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        Web design
+                                    </li>
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        Logo design
+                                    </li>
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        CSS animations
+                                    </li>
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        Mobile app
+                                    </li>
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        Web campaign
+                                    </li>
+                                    <li>
+                                        <i class="icon-li icon-ok"></i>
+                                        HTML5 implementation
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="portfolio-url overlay" href="#">
+                                <span class="overlay">
+            URL
+          </span>
+                                http://goo.gl/1orVY6
+                            </a>
+                            <div class="portfolio-share overlay">
+                                <span class="overlay">
+            Share
+          </span>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                         
+                        
+                    </div>
+                </div>
+            </section>
+          <script src="/public/assets/js/packages.min.js"></script>
+        <script src="/public/assets/js/theme.min.js"></script>
+</body>
+</html>
